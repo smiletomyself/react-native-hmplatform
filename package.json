@@ -1,7 +1,7 @@
 {
-  "name": "react-native-hmplatform",
+  "name": "RNHmplatform",
   "title": "React Native Hm Platform",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A common WebView extended by ImagePicker for React Native (Android and iOS platform).",
   "main": "index.js",
   "homepage": "https://github.com/smiletomyself/react-native-hmplatform/blob/main/README.md",
