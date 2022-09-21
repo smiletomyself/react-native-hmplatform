@@ -1,0 +1,24 @@
+{
+  "name": "react-native-hmplatform",
+  "version": "1.0.1",
+  "description": "hessian health manager platform base util for app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native"
+  ],
+  "author": "zhuxing",
+  "email": "smiletomyself@163.com",
+  "license": "MIT",
+  "peerDependencies": {
+    "react-native": ">=0.50.0",
+    "react-native-image-crop-picker": ">=0.25.0",
+    "react-native-webview": ">=7.5.2"
+  },
+  "dependencies": {
+    "react-native-image-crop-picker": "^0.38.0",
+    "react-native-webview": "^11.23.1"
+  }
+}
