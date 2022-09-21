@@ -1,5 +1,5 @@
 {
-  "name": "RNHmplatform",
+  "name": "react-native-hmplatform",
   "title": "React Native Hm Platform",
   "version": "1.0.5",
   "description": "A common WebView extended by ImagePicker for React Native (Android and iOS platform).",
