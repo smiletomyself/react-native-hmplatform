@@ -114,7 +114,7 @@ window["onRNMessage"] = (data) => {
 		var img = new Image()
     img.src='data:image/jpeg;base64,'+data.data
     document.body.appendChild(img)
-	} else if () {
+	} else if (data instanceof Array) {
 		for (var i = 0 ; i < data.length ; i++) {
       var img = new Image()
       img.src='data:image/jpeg;base64,'+data[i].data
