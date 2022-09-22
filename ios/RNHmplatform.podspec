@@ -1,24 +1,31 @@
+# react-native-hmplatform.podspec
+
+require "json"
+
+package = JSON.parse(File.read(File.join(__dir__, "package.json")))
 
 Pod::Spec.new do |s|
   s.name         = "RNHmplatform"
-  s.version      = "1.0.0"
-  s.summary      = "RNHmplatform"
+  s.version      = package["version"]
+  s.summary      = package["description"]
   s.description  = <<-DESC
-                  A common WebView extended by ImagePicker for React Native (Android and iOS platform).
+                  react-native-hmplatform for hessian health manager App
                    DESC
-  s.homepage     = "https://github.com/smiletomyself/react-native-hmplatform/blob/main/README.md"
+  s.homepage     = package['homepage']
+  # brief license entry:
   s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
-  s.author             = { "zhuxing" => "smiletomyself@163.com" }
-  s.platform     = :ios, "10.0"
+  # optional - use expanded license entry instead:
+  # s.license    = { :type => "MIT", :file => "LICENSE" }
+  s.authors      = package['author']
+  s.platforms    = { :ios => "10.0" }
   s.source       = { :git => "https://github.com/smiletomyself/react-native-hmplatform.git", :tag => "#{s.version}" }
-  s.source_files  = "RNHmplatform/**/*.{h,m}"
+
+  s.source_files = "ios/**/*.{h,c,cc,cpp,m,mm,swift}"
   s.requires_arc = true
 
-
   s.dependency "React"
-  #s.dependency "others"
-
+  s.dependency "React-Core"
+  # ...
+  # s.dependency "..."
 end
 
-  

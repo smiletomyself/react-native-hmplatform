@@ -42,6 +42,8 @@ export default class HMView extends Component {
             cropperToolbarTitle: '裁剪',
             cropperChooseText: '确定',
             cropperCancelText: '取消'
+            hideBottomControls:true,
+            enableRotationGesture:true
 
           }).then(image => {
             console.log(image);
@@ -62,6 +64,8 @@ export default class HMView extends Component {
             cropperCancelText: '取消',
             multiple: false,
             maxFiles: 6,
+            hideBottomControls:true,
+            enableRotationGesture:true
           }).then(image => {
             console.log(image);
             //回调方法通知H5
