@@ -30,9 +30,9 @@ export default class HMView extends Component {
     let data = event.nativeEvent.data;
     try {
       let result = JSON.parse(data);
+      console.log("HSHMPlatform", result);
       switch (result.type) {
         case 'HSopenCamera': //打开相机
-          console.log("收到打开相机的指令");
           ImagePicker.openCamera({
             width: 300,
             height: 400,
@@ -41,18 +41,17 @@ export default class HMView extends Component {
             loadingLabelText: '资源加载中...',
             cropperToolbarTitle: '裁剪',
             cropperChooseText: '确定',
-            cropperCancelText: '取消'
-            hideBottomControls:true,
-            enableRotationGesture:true
-
+            cropperCancelText: '取消',
+            hideBottomControls: true,
+            enableRotationGesture: true,
+            ...this.props.pickerOptions ? this.props.pickerOptions : {}
           }).then(image => {
-            console.log(image);
+            console.log("HSHMPlatform", image);
             //回调方法通知H5
             this.RNCallback(image);
           });
           break;
         case 'HSselectGalley':  //选择相册
-          console.log("收到选择相册的指令");
           ImagePicker.openPicker({
             width: 300,
             height: 400,
@@ -62,10 +61,11 @@ export default class HMView extends Component {
             cropperToolbarTitle: '裁剪',
             cropperChooseText: '确定',
             cropperCancelText: '取消',
+            hideBottomControls: true,
+            enableRotationGesture: true,
             multiple: false,
             maxFiles: 6,
-            hideBottomControls:true,
-            enableRotationGesture:true
+            ...this.props.pickerOptions ? this.props.pickerOptions : {}
           }).then(image => {
             console.log(image);
             //回调方法通知H5
