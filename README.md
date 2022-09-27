@@ -97,7 +97,7 @@ function openCamera(){
 you need to copy code blow in your H5 page
 
 ```javascript
-function openCamera(){
+function selectGalley(){
   window.ReactNativeWebView.postMessage(JSON.stringify({ type: "HSselectGalley",data: { } }))
 }
 ```

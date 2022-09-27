@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Dimensions } from 'react-native';
+import { View } from 'react-native';
 import { WebView } from 'react-native-webview';
 import ImagePicker from 'react-native-image-crop-picker';
 
@@ -99,7 +99,7 @@ export default class HMView extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, width: Dimensions.get('window').width, height: Dimensions.get('window').height, backgroundColor: 'bule' }}>
+      <View style={{ flex: 1 }}>
         <WebView
           ref={v => this.webView = v}
           source={this.props.url ? { uri: this.props.url } : { html: this.props.html }}
